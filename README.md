@@ -121,4 +121,6 @@ pytest tests/
 
 ## 라이선스
 
-MIT License
+Apache License 2.0
+
+자세한 내용은 [LICENSE.txt](LICENSE.txt) 파일을 참조하세요.
