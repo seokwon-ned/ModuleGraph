@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title }}</title>
+    <title>Android Module Dependency Graph</title>
     <script src="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js"></script>
     <style>
         body {
@@ -138,10 +138,20 @@
 </head>
 <body>
     <div class="container">
-        <h1>{{ title }}</h1>
+        <h1>Android Module Dependency Graph</h1>
         <div class="graph-container" id="graphContainer">
             <div class="mermaid" id="graph">
-                {{ mermaid_graph }}
+                graph TD
+    feature["feature"]
+    network["network"]
+    utils["utils"]
+    core["core"]
+    app["app"]
+    feature --> core
+    network --> utils
+    core --> network
+    app --> core
+    app --> feature
             </div>
         </div>
         <div class="info">
